@@ -1,4 +1,4 @@
-###  BSPWM DOTFILES :tw-1f49c:
+###  &hearts; BSPWM DOTFILES &hearts;
 ------------
 ###General view by SoyTonyRodriguez:
 ![](https://raw.githubusercontent.com/SoyTonyRodriguez/bspwm_dotfiles/master/screenshots/Bspwm.png)
