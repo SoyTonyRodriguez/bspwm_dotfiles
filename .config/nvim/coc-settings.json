@@ -1,0 +1,17 @@
+{
+  "suggest.noselect": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx",
+    "graphql",
+    "python",
+    "coc-highlight"
+  ],
+  "python.autoComplete.addBrackets": true,
+  "python.autoComplete.extraPaths": [],
+  "clangd.path": "/home/tony/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
+}
