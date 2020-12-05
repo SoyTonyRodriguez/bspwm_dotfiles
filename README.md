@@ -1,4 +1,4 @@
-###:fa-heart: BSPWM DOTFILES :fa-heart:
+### heart BSPWM DOTFILES heart 
 ------------
 ###General view by SoyTonyRodriguez:
 ![](https://raw.githubusercontent.com/SoyTonyRodriguez/bspwm_dotfiles/master/screenshots/Bspwm.png)
