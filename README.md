@@ -1,8 +1,14 @@
 ###  &hearts; BSPWM DOTFILES &hearts;
 ------------
-###General view by SoyTonyRodriguez:
+## General view by SoyTonyRodriguez:
 ![](https://raw.githubusercontent.com/SoyTonyRodriguez/bspwm_dotfiles/master/screenshots/Bspwm.png)
 
 ![](https://raw.githubusercontent.com/SoyTonyRodriguez/bspwm_dotfiles/master/screenshots/Desktop.png)
+
+###Neo-vim
+------------
+Color scheme [Pop Punk](https://github.com/bignimbus/pop-punk.vim)
+![](https://raw.githubusercontent.com/SoyTonyRodriguez/bspwm_dotfiles/master/screenshots/neoVim.png)
+
 
 <h2>Updates coming soon</h2>
