@@ -1,0 +1,25 @@
+{
+    "name": "Tony",
+    "comment": "By: https://github.com/SoyTonyRodriguez",
+    "use-theme-colors": false,
+    "foreground-color": "#0cddc5",
+    "background-color": "#000000",
+    "palette": [
+        "#000000",
+        "#AA0000",
+        "#03e343",
+        "#f9ad3d",
+        "#0571e7",
+        "#AA00AA",
+        "#00AAAA",
+        "#AAAAAA",
+        "#9e9393",
+        "#FF5454",
+        "#54FF54",
+        "#FFFF54",
+        "#5454FF",
+        "#FF54FF",
+        "#54FFFF",
+        "#FFFFFF"
+    ]
+}

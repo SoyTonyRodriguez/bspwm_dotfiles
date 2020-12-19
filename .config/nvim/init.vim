@@ -1,4 +1,5 @@
 syntax on
+filetype plugin indent on
 set number
 set title
 
@@ -24,11 +25,11 @@ set nocompatible
 call plug#begin('~/.local/share/nvim/plugged')
 
 "Themes
-Plug 'morhetz/gruvbox'
-Plug 'ayu-theme/ayu-vim'
-Plug 'joshdick/onedark.vim'
-Plug 'alessandroyorba/despacio'
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'bluz71/vim-moonfly-colors'
 
+Plug 'bignimbus/pop-punk.vim'
 
 "visual
 Plug 'yggdroot/indentline'
@@ -40,8 +41,20 @@ Plug 'lilydjwg/colorizer'
 
 "Funcionality
 Plug 'scrooloose/nerdtree'
+Plug 'metakirby5/codi.vim'
+Plug 'tpope/vim-surround'
+
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+
+"Git integration
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
 
 "Code modification
+Plug 'kovetskiy/sxhkd-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 
@@ -51,11 +64,35 @@ Plug 'sbdchd/neoformat'
 
 call plug#end()
 
-"       old theme
-set background=dark
-let ayucolor="dark"
-let g:gruvbox_cotrast_dark="hard"
-colorscheme ayu
+let mapleader = " "
+
+noremap <up> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+noremap <down> <nop>
+
+nnoremap <leader>w :w<CR> 
+nnoremap <leader>q :q<CR>
+" Moverse al buffer siguiente con <líder> + k
+nnoremap <leader>k :bnext<CR>
+
+" Moverse al buffer anterior con <líder> + j
+nnoremap <leader>j :bprevious<CR>
+
+" Cerrar el buffer actual con <líder> + d
+nnoremap <leader>d :bdelete<CR>
+:imap ,, <Esc>
+
+"crear una nueva ventana
+nnoremap <leader>t :tabe<CR>
+
+nmap <silent> gb <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-references)
+
+
+"highlightedyank
+let g:highlightedyank_highlight_duration = 1000
+let g:highlightedyank_highlight_duration = -1
 
 "Mapeo de la barra de estado airline
 let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)
@@ -73,4 +110,40 @@ map <leader><tab> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
+" Set up :make to use fish for syntax checking.
+"compiler fish
+"setlocal fonldmethod=expr
+"
+" Change these if you want
+let g:signify_sign_add               = '+'
+let g:signify_sign_delete            = '_'
+let g:signify_sign_delete_first_line = '‾'
+let g:signify_sign_change            = '~'
+
+
+" I find the numbers disctracting
+let g:signify_sign_show_count = 0
+let g:signify_sign_show_text = 1
+
+
+" If you like colors instead
+highlight SignifySignAdd                  ctermbg=green                guibg=#00ff00
+highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
+highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
+
+
+
+" configure nvcode-color-schemes
+let g:nvcode_termcolors=256
+
+syntax on
+" colorscheme moonfly  " Or whatever colorscheme you make
+colorscheme pop-punk
+let g:airline_section_c = '🎸 %F'
+
+" checks if your terminal has 24-bit color support
+if (has("termguicolors"))
+    set termguicolors
+    hi LineNr ctermbg=NONE guibg=NONE
+endif
 
