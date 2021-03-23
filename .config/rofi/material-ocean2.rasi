@@ -9,7 +9,7 @@
   foreground: #f1f1f1;
   selected: #7f59c6;
 
-  font: "Source Code Pro Regular 14";
+  font: "mononoki Nerd Font 14";
 }
 
 window {
@@ -27,8 +27,10 @@ prompt {
 
 textbox-prompt-colon {
   expand: false;
+  str: " :";
+  text-color: @foreground;
   background-color: @background;
-  padding: 4px 0px 0px 6px;
+  padding: 3px 0px 0px 6px;
 }
 
 inputbar {
@@ -36,8 +38,8 @@ inputbar {
   background-color: @background;
   text-color: @foreground;
   expand: false;
-  border: 0px 0px 0px 0px;
-  border-radius: 0px;
+  border: 1px 1px 1px 1px;
+  border-radius: 9px;
   border-color: @selected;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 4px 0px;

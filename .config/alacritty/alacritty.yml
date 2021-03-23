@@ -32,10 +32,15 @@ colors:
 
 font:
   bold:
-    family: Hack Nerd Font Mono
-  normal:
-    family: Hack Nerd Font Mono
-  italic:
-    family: Hack Nerd Font Mono
+    family: mononoki Nerd Font
+    #family: Hack Nerd Font Mono
 
-  font: 11
+  normal:
+    family: mononoki Nerd Font
+    #family: Hack Nerd Font Mono
+
+  italic:
+    family: mononoki Nerd Font
+    #family: Hack Nerd Font Mono
+    
+  font: 12

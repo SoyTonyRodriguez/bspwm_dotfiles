@@ -1,11 +1,9 @@
-###  &hearts; BSPWM DOTFILES &hearts;
-------------
+###  &hearts; BSPWM DOTFILES &hearts; ------------
 ## General view by SoyTonyRodriguez:
 ![](https://raw.githubusercontent.com/SoyTonyRodriguez/bspwm_dotfiles/master/screenshots/Bspwm.png)
 
 ![](https://raw.githubusercontent.com/SoyTonyRodriguez/bspwm_dotfiles/master/screenshots/Desktop.png)
 
-![](https://raw.githubusercontent.com/SoyTonyRodriguez/bspwm_dotfiles/master/screenshots/Desktop_Fondo_Dos.png)
 
 ###Neo-vim
 ------------
