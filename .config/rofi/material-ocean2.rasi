@@ -5,9 +5,11 @@
 */
 
 * {
-  background: #1b1c26;
+  background:#282a36;
   foreground: #f1f1f1;
-  selected: #7f59c6;
+  selected: #2a8bda;
+
+  border: #f1f1f1;
 
   font: "mononoki Nerd Font 14";
 }
@@ -16,6 +18,10 @@ window {
   transparency: "real";
   background-color: @background;
   text-color: @foreground;
+  border-color: @border;
+
+  border: 2;
+  border-radius: 10;
 }
 
 prompt {
@@ -27,10 +33,10 @@ prompt {
 
 textbox-prompt-colon {
   expand: false;
-  str: " :";
+  str: " : ";
   text-color: @foreground;
   background-color: @background;
-  padding: 3px 0px 0px 6px;
+  padding: 4px 0px 0px 6px;
 }
 
 inputbar {
@@ -39,8 +45,8 @@ inputbar {
   text-color: @foreground;
   expand: false;
   border: 1px 1px 1px 1px;
-  border-radius: 9px;
-  border-color: @selected;
+  border-radius: 10px;
+  border-color: @background;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 4px 0px;
   position: center;
@@ -101,7 +107,7 @@ element-text {
 element selected {
   background-color: @selected;
   text-color: @background;
-  border: 0px;
-  border-radius: 0px;
+  border: 2px;
+  border-radius: 20px;
   border-color: @selected;
 }
