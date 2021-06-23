@@ -61,6 +61,7 @@ super + ctrl + {m,x,y,z}
 #
 
 # focus the node in the given direction
+# Cambiar ventana de lugar
 super {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
@@ -68,11 +69,17 @@ super {_,shift + }{h,j,k,l}
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
-# focus the next/previous window in the current desktop
+focus the next/previous window in the current desktop
 alt + {_,shift + }Tab
 	bspc node -f {next,prev}.local.!hidden.window
+#
+##Go to specific window
+#alt + Tab
+#	rofi -show window
+
 
 # focus the next/previous desktop in the current monitor
+# Moverse entre escritorios
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
@@ -132,22 +139,25 @@ super + {Left,Down,Up,Right}
 	
 #Firefox
 alt + f
-	firefox
-	# firefox-developer-edition
+	firefox-developer-edition
+	#firefox
 
-#Volume Control
-XF86AudioLowerVolume
-	amixer set Master 5%-
-XF86AudioRaiseVolume
-	amixer set Master 5%+
+
+# increase/decrease volume by 5%
+XF86Audio{Raise,Lower}Volume
+    amixer set Master {5%+,5%-}
+
+# toggle volume mute
 XF86AudioMute
-        amixer set Master toggle
+   amixer set Master toggle
 
-#Brightness control
-XF86MonBrightnessDown
-	xbacklight -dec 5
-XF86MonBrightnessUp
-	xbacklight -inc 5
+# increase/decrease brightness by 10
+XF86MonBrightness{Up,Down}
+    xbacklight {-inc 5,-dec 5}
+
+# next, previous, play-pause toggle
+XF86Audio{Next,Prev,Play}
+    playerctl {next,previous,play-pause}
 
 # full screenshot, selection area, full in 5 seconds
 Print
@@ -161,10 +171,16 @@ super + e
 super + v
   	 rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
-# Delete clipboard content
-super + alt + v
-   	greenclip clear
+Neovim
+alt + shift + n
+ 		alacritty -e nvim
+
+# # Delete clipboard content
+# super + alt + v
+#    	greenclip clear
 
 # lockscreen
-super + p
- GLITCHICON=/opt/glitchlock/stop.png /opt/glitchlock/glitchlock
+# super + p
+#  GLITCHICON=/opt/glitchlock/stop.png /opt/glitchlock/glitchlock
+
+
