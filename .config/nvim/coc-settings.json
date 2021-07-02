@@ -15,7 +15,68 @@
   ],
   "python.autoComplete.addBrackets": true,
   "python.autoComplete.extraPaths": [],
+  "pyright.enable": true,
   "clangd.path": "/home/tony/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
   "html.autoClosingTags": true,
-  "html.format.enable": false
+  "html.format.enable": false,
+  "html.suggest.html5": true,
+  "suggest.completionItemKindLabels": {
+    "method": " ƒ ",
+    "function": "  ",
+    "variable": "  ",
+    "field": "  ",
+    "typeParameter": "  ",
+    "constant": "  ",
+    "class": " פּ ",
+    "interface": " 蘒",
+    "struct": "  ",
+    "event": "  ",
+    "operator": "  ",
+    "module": "  ",
+    "property": "  ",
+    "enum": " 練",
+    "reference": "  ",
+    "keyword": "  ",
+    "file": "  ",
+    "folder": " ﱮ ",
+    "color": "  ",
+    "unit": " 塞 ",
+    "snippet": "  ",
+    "text": "  ",
+    "constructor": "  ",
+    "value": "  ",
+    "enumMember": "  "
+  },
+  // explorer
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.keyMappings.global": {
+    "<cr>": [
+      "expandable?",
+      "expand",
+      "open"
+    ],
+    "v": "open:vsplit"
+  }, 
+
+  "coc.preferences.colorSupport": true,
+  "diagnostic.refreshOnInsertMode": true,
+  "diagnostic.hintSign": "ღ",
+  "diagnostic.infoSign": "ʘ",
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.enable": true,
+  "diagnostic.signOffset": 9999999,
+  "diagnostic.highlightOffset": 9999999,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextPrefix": " ❯❯❯ ",
+   //CocList
+  "list.source.files.defaultOptions": ["--auto-preview"],
+  "list.source.outline.defaultOptions": ["--auto-preview"],
+  "prettier.statusItemText": "★ ",
+  "prettier.eslintIntegration": true,
+  "prettier.tslintIntegration": true,
+  "prettier.stylelintIntegration": false
 }
+

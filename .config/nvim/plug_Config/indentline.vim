@@ -1,2 +1,8 @@
-let g:indentLine_color_gui = '#A4E57E'
-let g:indentLine_char_list = ['┊']
+let g:indentLine_char = '▏'
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+" let g:indent_guides_auto_colors = 1
+let g:indentLine_fileTypeExclude = [
+      \'startify',
+      \'tagbar',
+      \]

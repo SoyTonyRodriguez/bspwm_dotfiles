@@ -1,57 +1,93 @@
+
+" ██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗
+" ██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║██╔════╝
+" ██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║███████╗
+" ██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║╚════██║
+" ██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║
+" ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝
+
+"By: https://github.com/SoyTonyRodriguez"
+
 call plug#begin('~/.local/share/nvim/plugged')
 
-"Themes
-Plug 'christianchiarulli/nvcode-color-schemes.vim'
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'bluz71/vim-moonfly-colors'
-Plug 'bignimbus/pop-punk.vim'
+"_-_-_-_-_-_-_-_-_-_- Themes _-_-_-_-_-_-_-_-_-_-
 
-"visual
-Plug 'yggdroot/indentline'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  "syntax code
+Plug 'kjwon15/vim-transparent'             "neovim transparent
+Plug 'bignimbus/pop-punk.vim'              "The best theme for neovim <3
+Plug 'bluz71/vim-nightfly-guicolors'
+
+Plug 'hzchirs/vim-material'
+
+"_-_-_-_-_-_-_-_-_-_- Visual _-_-_-_-_-_-_-_-_-_-
+
+Plug 'yggdroot/indentline'                 "Vertical lines for code with spaces
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ryanoasis/vim-devicons'
-Plug 'zinit-zsh/zinit-vim-syntax'
-Plug 'lilydjwg/colorizer'
-Plug 'kjwon15/vim-transparent'
-Plug 'leafgarland/typescript-vim'
-Plug 'jistr/vim-nerdtree-tabs'
-" Plug 'wfxr/minimap.vim'
+Plug 'vim-airline/vim-airline-themes'      "Themes for airline
+Plug 'ryanoasis/vim-devicons'              "Icons for the plugins
+Plug 'zinit-zsh/zinit-vim-syntax'          "Syntax for files .zsh
+Plug 'lilydjwg/colorizer'                  "Colorize all text in the form rgb, etc.
+Plug 'leafgarland/typescript-vim'          "Syntax for typescript
+Plug 'jistr/vim-nerdtree-tabs'             "Tabs for nerdtree
+Plug 'kovetskiy/sxhkd-vim'                 "Syntax for sxhkd
+Plug 'mhinz/vim-startify'
 
-"Funcionality
-Plug 'scrooloose/nerdtree'
+"_-_-_-_-_-_-_-_-_-_- Funcionality _-_-_-_-_-_-_-_-_-_-
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
+Plug 'junegunn/fzf.vim'                     "File explorer (ctrl + p)
+Plug 'scrooloose/nerdtree'                  "File explorer (leader + tab)
 Plug 'metakirby5/codi.vim'
-Plug 'tpope/vim-surround'
-Plug 'KabbAmine/vCoolor.vim' "Shortcut <alt-c>
+Plug 'tpope/vim-surround'                   "Fast change parentheses, brackets, etc.
+Plug 'KabbAmine/vCoolor.vim'                "Color selector (Shortcut <alt-c>(hex))
+Plug 'vim-python/python-syntax'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'easymotion/vim-easymotion'
-Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-commentary'
-Plug 'mg979/vim-visual-multi', {'branch': 'master'},
+Plug 'easymotion/vim-easymotion'            "Fast search of characters(leader + b)
+Plug 'tpope/vim-commentary'                 "Fast comment with (gcc)
+Plug 'terryma/vim-multiple-cursors'         "Multiple cursor to edit code (ctrl + n)
+Plug 'preservim/tagbar'                     "A class outline viewer for Vim (<BS>)(Need install ctags)
 
-"Git integration
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+"_-_-_-_-_-_-_-_-_-_- Git integration _-_-_-_-_-_-_-_-_-_-
+
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 
-"Code modification
-Plug 'kovetskiy/sxhkd-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sheerun/vim-polyglot'
-Plug 'jiangmiao/auto-pairs'
-Plug 'chiel92/vim-autoformat'
-Plug 'othree/html5.vim', { 'for': 'html' }
-Plug 'artur-shaik/vim-javacomplete2'
+"_-_-_-_-_-_-_-_-_-_- Code modification _-_-_-_-_-_-_-_-_-_-
 
-" if has('nvim')
-"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-"   Plug 'Shougo/deoplete.nvim'
-"   Plug 'roxma/nvim-yarp'
-"   Plug 'roxma/vim-hug-neovim-rpc'
-" endif
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "Better code autocompletion
+Plug 'sheerun/vim-polyglot'                     "A collection of language packs for Vim
+Plug 'jiangmiao/auto-pairs'                     "Insert or delete brackets, parens, quotes in pair
+Plug 'chiel92/vim-autoformat'                   "Format code (leader + f)
+Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'artur-shaik/vim-javacomplete2'            "Java code autocompletion
+
+
+"_-_-_-_-_-_-_-_-_-_- Python autocomplete _-_-_-_-_-_-_-_-_-_-
+" Plug 'roxma/nvim-yarp'
+" Plug 'ncm2/ncm2'
+" " Fast python completion (use ncm2 if you want type info or snippet support)
+" Plug 'HansPinckaers/ncm2-jedi'
+" " Words in buffer completion
+" Plug 'ncm2/ncm2-bufword'
+" " Filepath completion
+" " Plug 'ncm2/ncm2-path'
+
+
 call plug#end()
 
-nmap zuz <Plug>(FastFoldUpdate)
-let g:fastfold_savehook = 1
+
+" " ncm2 settings
+" autocmd BufEnter * call ncm2#enable_for_buffer()
+" set completeopt=menuone,noselect,noinsert
+" set shortmess+=c
+" inoremap <c-c> <ESC>
+" " make it fast
+" let ncm2#popup_delay = 5
+" let ncm2#complete_length = [[1, 1]]
+" " Use new fuzzy based matches
+" let g:ncm2#matcher = 'substrfuzzy'
+
