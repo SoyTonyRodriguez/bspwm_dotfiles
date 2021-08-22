@@ -48,7 +48,7 @@ Plug 'terryma/vim-multiple-cursors'         "Multiple cursor to edit code (ctrl 
 Plug 'preservim/tagbar'                     "A class outline viewer for Vim (<BS>)(Need install ctags)
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-
+Plug 'Lenovsky/nuake'
 "_-_-_-_-_-_-_-_-_-_- Git integration _-_-_-_-_-_-_-_-_-_-
 
 Plug 'mhinz/vim-signify'
@@ -61,10 +61,8 @@ Plug 'junegunn/gv.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Better code autocompletion
 Plug 'sheerun/vim-polyglot'                     "A collection of language packs for Vim
 Plug 'jiangmiao/auto-pairs'                     "Insert or delete brackets, parens, quotes in pair
-Plug 'chiel92/vim-autoformat'                   "Format code (leader + f)
 Plug 'othree/html5.vim', { 'for': 'html' }
-Plug 'artur-shaik/vim-javacomplete2'            "Java code autocompletion
-
+" Plug 'artur-shaik/vim-javacomplete2'            "Java code autocompletion
 
 "_-_-_-_-_-_-_-_-_-_- Python autocomplete _-_-_-_-_-_-_-_-_-_-
 " Plug 'roxma/nvim-yarp'
@@ -79,15 +77,4 @@ Plug 'artur-shaik/vim-javacomplete2'            "Java code autocompletion
 
 call plug#end()
 
-
-" " ncm2 settings
-" autocmd BufEnter * call ncm2#enable_for_buffer()
-" set completeopt=menuone,noselect,noinsert
-" set shortmess+=c
-" inoremap <c-c> <ESC>
-" " make it fast
-" let ncm2#popup_delay = 5
-" let ncm2#complete_length = [[1, 1]]
-" " Use new fuzzy based matches
-" let g:ncm2#matcher = 'substrfuzzy'
 

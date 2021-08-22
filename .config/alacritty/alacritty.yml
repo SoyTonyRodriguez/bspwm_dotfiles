@@ -33,14 +33,11 @@ colors:
 font:
   bold:
     family: mononoki Nerd Font
-    #family: Hack Nerd Font Mono
 
   normal:
     family: mononoki Nerd Font
-    #family: Hack Nerd Font Mono
 
   italic:
     family: mononoki Nerd Font
-    #family: Hack Nerd Font Mono
     
-  font: 12
+  size: 9.9

@@ -16,6 +16,8 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "Coc mapings
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-references)
+nmap <silent> ga <Plug>(coc-codeaction)
+nmap <silent> <leader>f <Plug>(coc-format)
 nmap <silent> <leader>r <Plug>(coc-rename)
 
 

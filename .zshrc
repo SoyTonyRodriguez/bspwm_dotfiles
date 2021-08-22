@@ -1,5 +1,8 @@
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+export VISUAL=nvim;
+export EDITOR=nvim;
+
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -12,6 +15,9 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
+#The most important, for keybindings Ctrl-A, Ctrl-E
+bindkey -e
+
 #Alias
 alias la='lsd -a --group-dirs=first'
 alias ls='lsd --group-dirs=first'
@@ -23,12 +29,15 @@ if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh        old ubication
+
+[ -f ~/.zsh/fzf_files/.fzf.zsh ] && source ~/.zsh/fzf_files/.fzf.zsh
 
 #Manual plugins
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-sudo/sudo.plugin.zsh
+source $HOME/.zsh/bd/bd.zsh # use bd for jump back to the previous directory without tipping cd ../..
 
 # Load Git completion
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.zsh
@@ -74,3 +83,25 @@ _comp_options+=(globdots)   # Include hidden files.
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+
+
+# Set 'man' colors
+function man() {
+    env \
+    LESS_TERMCAP_mb=$'\e[01;31m' \
+    LESS_TERMCAP_md=$'\e[01;31m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;44;33m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[01;32m' \
+    man "$@"
+}
