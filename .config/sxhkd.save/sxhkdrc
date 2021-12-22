@@ -80,8 +80,7 @@ alt + {_,shift + }Tab
 
 # focus the next/previous desktop in the current monitor
 # Moverse entre escritorios
-# super + bracket{left,right}
-super + {i,o}
+super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
@@ -140,8 +139,8 @@ super + {Left,Down,Up,Right}
 	
 #Firefox
 alt + f
-	firefox
-	#firefox-developer-edition
+	firefox-developer-edition
+	#firefox
 
 
 # increase/decrease volume by 5%
@@ -162,7 +161,7 @@ XF86Audio{Next,Prev,Play}
 
 # full screenshot, selection area, full in 5 seconds
 Print
-    	flameshot gui -p /home/antonio/Pictures/Screenshots
+    	flameshot gui -p /home/tony/Imágenes
 
 #Pcmanfm
 super + e

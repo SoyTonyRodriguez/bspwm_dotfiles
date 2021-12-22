@@ -8,7 +8,6 @@
     "javascriptreact",
     "typescript.tsx",
     "graphql",
-    "python",
     "html",
     "css",
     "coc-highlight"
@@ -19,11 +18,11 @@
   "java.jdt.ls.vmargs": "-javaagent:/usr/local/share/lombok/lombok.jar",
   "java.trace.server": "verbose",
   //Python
+  "snippets.ultisnips.usePythonx": false,
   "python.autoComplete.addBrackets": true,
   "python.autoComplete.extraPaths": [],
-  "python.formatting.provider": "black",
   "pyright.enable": true,
-  "clangd.path": "/home/tony/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
   "html.autoClosingTags": true,
   "html.format.enable": false,
   "html.suggest.html5": true,
@@ -60,9 +59,10 @@
   "explorer.previewAction.onHover": false,
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
-    "v": "open:vsplit"
+    "m": "actionMenu", 
+    "<tab>": false
   },
-
+  
   "coc.preferences.colorSupport": true,
   "diagnostic.refreshOnInsertMode": true,
   "diagnostic.hintSign": "ღ",

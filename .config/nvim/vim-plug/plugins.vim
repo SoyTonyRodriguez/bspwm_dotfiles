@@ -13,12 +13,10 @@ call plug#begin('~/.local/share/nvim/plugged')
 "_-_-_-_-_-_-_-_-_-_- Themes _-_-_-_-_-_-_-_-_-_-
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  "syntax code
-Plug 'kjwon15/vim-transparent'             "neovim transparent
 Plug 'bignimbus/pop-punk.vim'              "The best theme for neovim <3
 Plug 'bluz71/vim-nightfly-guicolors'
 
 Plug 'hzchirs/vim-material'
-
 "_-_-_-_-_-_-_-_-_-_- Visual _-_-_-_-_-_-_-_-_-_-
 
 Plug 'yggdroot/indentline'                 "Vertical lines for code with spaces
@@ -30,7 +28,6 @@ Plug 'lilydjwg/colorizer'                  "Colorize all text in the form rgb, e
 Plug 'leafgarland/typescript-vim'          "Syntax for typescript
 Plug 'jistr/vim-nerdtree-tabs'             "Tabs for nerdtree
 Plug 'kovetskiy/sxhkd-vim'                 "Syntax for sxhkd
-Plug 'mhinz/vim-startify'
 
 "_-_-_-_-_-_-_-_-_-_- Funcionality _-_-_-_-_-_-_-_-_-_-
 
@@ -49,6 +46,9 @@ Plug 'preservim/tagbar'                     "A class outline viewer for Vim (<BS
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'Lenovsky/nuake'
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
 "_-_-_-_-_-_-_-_-_-_- Git integration _-_-_-_-_-_-_-_-_-_-
 
 Plug 'mhinz/vim-signify'
@@ -74,7 +74,5 @@ Plug 'othree/html5.vim', { 'for': 'html' }
 " " Filepath completion
 " " Plug 'ncm2/ncm2-path'
 
-
 call plug#end()
-
 

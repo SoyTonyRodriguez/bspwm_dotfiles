@@ -33,8 +33,8 @@ set autoindent              " Automatically set indent of new line
 
 highlight ColoColumn ctermbg=0 guibg=lightgrey
 set nocompatible
-set list
-set listchars=tab:┊\
+" set list
+" set listchars=tab:┊\
 filetype plugin indent on " enable detection, plugins and indents
 set completeopt=menuone,noinsert,noselect " better autocomplete options
 

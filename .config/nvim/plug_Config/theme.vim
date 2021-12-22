@@ -2,7 +2,6 @@
 let g:nvcode_termcolors=256
 
 colorscheme pop-punk
-" colorscheme material
 
 " checks if your terminal has 24-bit color support
 " if (has("termguicolors"))

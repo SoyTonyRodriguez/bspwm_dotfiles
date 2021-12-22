@@ -15,11 +15,11 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 "Coc mapings
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-references)
+nmap <silent> gr <Plug>(coc-references)
 nmap <silent> ga <Plug>(coc-codeaction)
 nmap <silent> <leader>f <Plug>(coc-format)
 nmap <silent> <leader>r <Plug>(coc-rename)
-
+nmap <silent><leader><tab> :CocCommand explorer<CR>
 
 " Use <c-space> to trigger completion.
 if has('nvim')
@@ -33,7 +33,6 @@ endif
 " Do default action for previous item.
 "nnoremap <silent><nowait><space>h  :<C-u>CocPrev<CR>
 
-
 " Explorer
 let g:coc_explorer_global_presets = {
 \   '.vim': {
@@ -42,27 +41,6 @@ let g:coc_explorer_global_presets = {
 \   'tab': {
 \     'position': 'tab',
 \     'quit-on-open': v:true,
-\   },
-\   'floating': {
-\     'position': 'floating',
-\     'open-action-strategy': 'sourceWindow',
-\   },
-\   'floatingTop': {
-\     'position': 'floating',
-\     'floating-position': 'center-top',
-\     'open-action-strategy': 'sourceWindow',
-\   },
-\   'floatingLeftside': {
-\     'position': 'floating',
-\     'floating-position': 'left-center',
-\     'floating-width': 50,
-\     'open-action-strategy': 'sourceWindow',
-\   },
-\   'floatingRightside': {
-\     'position': 'floating',
-\     'floating-position': 'right-center',
-\     'floating-width': 50,
-\     'open-action-strategy': 'sourceWindow',
 \   },
 \   'simplify': {
 \     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
@@ -89,12 +67,14 @@ hi! PmenuSel ctermbg=0
 hi! LineNr ctermfg=NONE guibg=NONE
 
 
-" nmap <space>e :CocCommand explorer<CR>
+
+" nnoremap <space>e :CocCommand explorer<CR>
 " nnoremap <space>i <C-w><C-w>
 
-" nmap <space>i :CocCommand explorer --preset floating<CR>
-" autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
-"
+nnoremap <Tab> <C-w><C-w>
+
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
 let g:coc_global_extensions = [
         \ 'coc-css',
         \ 'coc-json',
@@ -112,4 +92,5 @@ let g:coc_global_extensions = [
         \ 'coc-diagnostic',
         \ 'coc-highlight'
         \ ]
+
 

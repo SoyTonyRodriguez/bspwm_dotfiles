@@ -31,17 +31,16 @@ flameshot &
 # rofi greenclipboard daemon
 greenclip daemon &
 
-/usr/bin/lxqt-policykit-agent &
+# /usr/bin/lxqt-policykit-agent &
+/usr/lib/xfce-polkit/xfce-polkit &
 
 #background
-feh --bg-fill /home/tony/.local/share/wallpapers/fondoPrincipal.jpg &
-# feh --bg-fill /home/tony/.local/share/wallpapers/wallpaper.jpg &
-
+feh --bg-fill /home/antonio/.local/share/wallpapers/fondoPrincipal.jpg &
 
 bspc config pointer_modifier mod1 
 
 bspc monitor -d I II III IV V VI 
-bspc monitor HDMI1 -d IX X
+# bspc monitor HDMI1 -d IX X
 
 bspc config border_width          2
 bspc config window_gap            10
@@ -61,5 +60,6 @@ bspc config gapless_monocle      true
 #bspc rule -a Firefox desktop='^2'
 #bspc rule -a mplayer2 state=floating
 #bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+
+# bspc rule -a Screenkey manage=off
 

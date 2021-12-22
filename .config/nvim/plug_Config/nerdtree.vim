@@ -3,7 +3,7 @@
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "Mapeo del explorador de archivos
-map <leader><tab> :NERDTreeToggle<CR>
+" map <leader><tab> :NERDTreeToggle<CR>
 
 " let g:NERDTreeChDirMode = 2 "Cambia el directorio actual al nodo padre actual
 let g:NERDTreeDirArrowExpandable = ''
