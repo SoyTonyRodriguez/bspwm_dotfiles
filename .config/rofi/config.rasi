@@ -148,4 +148,23 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
-@import "/usr/share/rofi/themes/material-ocean2.rasi"
+/* @import "/usr/share/rofi/themes/material-ocean2.rasi" */
+//@theme "/usr/share/rofi/themes/docu.rasi"
+//@theme "/usr/share/rofi/themes/arthur.rasi"
+//@theme "/usr/share/rofi/themes/material-ocean.rasi"
+//@theme "/usr/share/rofi/themes/theme.rasi"
+//@theme "/usr/share/rofi/themes/new_Theme.rasi"
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+//@theme "/usr/share/rofi/themes/onemon.rasi"
+//@theme "/usr/share/rofi/themes/material-ocean.rasi"
+//@theme "/usr/share/rofi/themes/onemon.rasi"
+//@theme "/usr/share/rofi/themes/color.rasi"
+//@theme "/usr/share/rofi/themes/mojave.rasi"
+//@theme "/usr/share/rofi/themes/mac.rasi"
+//@theme "/usr/share/rofi/themes/dracula.rasi"
+//@theme "/usr/share/rofi/themes/mac.rasi"
+//@theme "/usr/share/rofi/themes/mojave.rasi"
+//@theme "/usr/share/rofi/themes/paper-float.rasi"
+//@theme "/usr/share/rofi/themes/onemon.rasi"
+//@theme "/usr/share/rofi/themes/mojave.rasi"
+@theme "/usr/share/rofi/themes/onemon.rasi"
