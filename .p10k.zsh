@@ -35,7 +35,6 @@
     context
     dir                     # current directory
     vcs                     # git status
-    command_execution_time
     status
     # =========================[ Line #2 ]=========================
     newline                 # \n

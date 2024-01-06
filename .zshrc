@@ -10,7 +10,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 #Manual configuration
 # PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
-PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/antonio/.local/bin:psql
+PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/antonio/.local/bin:psql:/usr/sbin:/usr/lib/
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
@@ -29,13 +29,16 @@ if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh        old ubication
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh        old ubication
 
-[ -f ~/.zsh/fzf_files/.fzf.zsh ] && source ~/.zsh/fzf_files/.fzf.zsh
+#[ -f ~/.zsh/fzf_files/.fzf.zsh ] && source ~/.zsh/fzf_files/.fzf.zsh
 
 #Manual plugins
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
 source ~/.zsh/zsh-sudo/sudo.plugin.zsh
 source $HOME/.zsh/bd/bd.zsh # use bd for jump back to the previous directory without tipping cd ../..
 
@@ -105,3 +108,4 @@ function man() {
     LESS_TERMCAP_us=$'\e[01;32m' \
     man "$@"
 }
+fpath+=${ZDOTDIR:-~}/.zsh_functions
