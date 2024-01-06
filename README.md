@@ -1,6 +1,6 @@
 ##  &hearts; BSPWM DOTFILES &hearts; 
 ---
-This is config from my archlinux machine, I using the WM bspwm.
+This my config from my archlinux machine, I using the WM bspwm.
 If it is to your liking, do not hesitate to give a star (:
 
 ## General view by SoyTonyRodriguez:
