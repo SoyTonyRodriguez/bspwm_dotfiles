@@ -139,10 +139,8 @@ super + {Left,Down,Up,Right}
 #Custom	
 	
 #Firefox
-alt + f
-	firefox
-	#firefox-developer-edition
-
+super + w
+	opera
 
 # increase/decrease volume by 5%
 XF86Audio{Raise,Lower}Volume
@@ -162,7 +160,7 @@ XF86Audio{Next,Prev,Play}
 
 # full screenshot, selection area, full in 5 seconds
 Print
-    	flameshot gui -p /home/antonio/Pictures/Screenshots
+    	flameshot gui
 
 #Pcmanfm
 super + e
@@ -172,16 +170,12 @@ super + e
 super + v
   	 rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
-Neovim
+# Neovim
 alt + shift + n
  		alacritty -e nvim
 
-# # Delete clipboard content
-# super + alt + v
-#    	greenclip clear
-
-# lockscreen
-# super + p
-#  GLITCHICON=/opt/glitchlock/stop.png /opt/glitchlock/glitchlock
+# Delete clipboard content
+super + alt + v
+   	greenclip clear
 
 
