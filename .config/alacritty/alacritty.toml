@@ -1,0 +1,44 @@
+[window]
+opacity = 0.95
+
+[colors.bright]
+black = "#9e9393"
+blue = "#5454FF"
+cyan = "#54FFFF"
+green = "#54FF54"
+magenta = "#FF54FF"
+red = "#FF5454"
+white = "#FFFFFF"
+yellow = "#FFFF54"
+
+[colors.normal]
+black = "#000000"
+blue = "#0571e7"
+cyan = "#02cccc"
+green = "#03e343"
+magenta = "#AA00AA"
+red = "#FF5454"
+white = "#AAAAAA"
+yellow = "#f9ad3d"
+
+[colors.primary]
+background = "#000000"
+foreground = "#0cddc5"
+
+[cursor.style]
+shape = "Beam"
+
+[cursor.vi_mode_style]
+shape = "Block"
+
+[font]
+size = 9.9
+
+[font.bold]
+family = "mononoki Nerd Font"
+
+[font.italic]
+family = "mononoki Nerd Font"
+
+[font.normal]
+family = "mononoki Nerd Font"
